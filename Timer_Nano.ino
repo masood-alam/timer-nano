@@ -1,21 +1,14 @@
 #include "Arduino.h"
 /*
-  Blink
-  Turns on an LED on for one second, then off for one second, repeatedly.
+  On-Off Timer based on time settings in minutes
+  Single output is driven accordingly to control any external load.
+  4-digit 7segment display is used to show
+  two digit on time and two digit off time
+  4 push buttons are '+' and '-' commands to increase and decrease for on-time and
+  off-time settings.
+  one extra push button shows the current settings on press.
 
-  Most Arduinos have an on-board LED you can control. On the UNO, MEGA and ZERO
-  it is attached to digital pin 13, on MKR1000 on pin 6. LED_BUILTIN takes care
-  of use the correct LED pin whatever is the board used.
-  If you want to know what pin the on-board LED is connected to on your Arduino model, check
-  the Technical Specs of your board  at https://www.arduino.cc/en/Main/Products
-
-  This example code is in the public domain.
-
-  modified 8 May 2014
-  by Scott Fitzgerald
-
-  modified 2 Sep 2016
-  by Arturo Guadalupi
+  created by Masood Alam
 */
 #include <SevSeg.h>
 #include <EEPROM.h>
